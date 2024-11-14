@@ -1,0 +1,467 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #172B4D;
+    transition: all ease 0.1s;
+}
+
+
+body {
+    background-color: #fff;
+}
+
+/* -----------header------------ */
+
+#header {
+    background-color: #fff;
+    position: fixed;
+    height: 48px;
+    display: flex;
+    top: 0;
+    right: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    z-index: 1;
+    border-bottom: 1px solid rgba(23, 43, 77, 0.16);
+}
+
+.header__logo {
+    width: 84px;
+}
+
+.header__logo-img {
+    width: 100%;
+}
+
+.header__nav-right {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    list-style-type: none;
+}
+
+.headRight {
+    display: flex;
+    align-items: center;
+}
+
+.header__avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.header__subnav {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #282e33;
+    color: rgb(182, 194, 207);
+}
+
+.header__subnav li > a {
+    color: white;
+    display: block;
+    padding: 12px 32px;
+    text-decoration: none;
+}
+
+.header__subnav > li:hover > a {
+    background-color: #A1BDD914;
+}
+
+/*     --------body--------     */
+
+#body {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+#boxLeft {
+    width: 15%;
+    height: 90vh;
+    min-height: 200px;
+    overflow: hidden;
+    position: sticky;
+    top: 88px;
+    margin-top: 88px;
+}
+
+#content {
+    max-width: 870px;
+    width: 60%;
+    margin: 0 16px;
+    padding-top: 88px;
+}
+
+/*-----------ASIDE---------*/
+
+.aside__list {
+    font-size: 14px;
+    list-style-type: none;
+    padding: 0 16px;
+    font-weight: 600;
+}
+
+.aside__list-item {
+    padding: 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 20px;
+    align-items: center;
+}
+
+.aside__list-item-icon {
+    margin-right: 8px;
+    width: 15px;
+    height: 15px;
+}
+
+.aside__list-item-control {
+    padding: 5px 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.aside__list-item-control:hover {
+    background-color: rgba(9, 30, 66, 0.14);
+}
+
+.aside__list-item span {
+    flex-grow: 1;
+}
+
+.fa-user-friends:before, .fa-user-group:before {
+    height: 14px;
+    width: 14px;
+}
+
+/*     ------GROUP--------   */
+
+.group-heading h3 {
+    color: rgb(68, 84, 111);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.group {
+    margin: 25px 0;
+}
+
+.group_header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 19px;
+}
+
+.group__header-name {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.group__header-controls {
+    display: flex;
+}
+
+.group__header-control {
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 6px 12px;
+    line-height: 20px;
+    background-color: #f1f2f4;
+    margin-right: 8px;
+    font-weight: 600;
+}
+
+.group__header-control span {
+    color: rgba(23, 43, 77, 0.8);
+}
+
+.group__header-control:hover {
+    background-color: #dcdfe4;
+}
+
+.group__header-control > i {
+    margin-right: 6px;
+}
+
+.table_create span {
+    font-size: 70px;
+}
+
+.group__tables {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.group__table {
+    width: 200px;
+    height: 96px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2% 2% 0;
+    position: relative;
+}
+
+.hover-white:hover {
+    opacity: 0.8;
+}
+
+.hover-black:hover a {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.group__table a {
+    width: 100%;
+    height: 100%;
+}
+
+.group__table-add {
+    padding: 20px;
+}
+
+.group__table-btn {
+    opacity: 0.5;
+    padding: 23px 60px;
+    border: #172B4D dashed 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.group__table-btn:hover {
+    opacity: 0.8;
+}
+
+.group__table-btn i {
+    font-size: 30px;
+}
+
+.group__table-name {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    line-height: 20px;
+}
+
+.group__table-name h4 {
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+/* -------modal form information--------- */
+.modals {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+}
+.modal__information{
+    width: 600px;
+    height: 650px;
+    background-color: white;
+    margin: 4% auto;
+    display: flex;
+}
+.modal__information-half {
+    width: 100%;
+}
+.modals__group-half {
+    width: 50%;
+}
+.modal__btnIn-formation-close {
+    position: absolute;
+    font-size: 40px;
+    right: 34.2%;
+    top: 74px;
+    text-decoration: none;
+    color: rgba(23, 43, 77, 0.5);
+    cursor: pointer;
+    padding: 15px;
+}
+
+.modals__btn-close {
+    position: absolute;
+    font-size: 40px;
+    right: 10px;
+    top: 10px;
+    text-decoration: none;
+    color: rgba(23, 43, 77, 0.5);
+    cursor: pointer;
+    padding: 15px;
+}
+.modals__btn-close:hover {
+    color: rgba(23, 43, 77, 1);
+}
+.modals__btn-close i {
+    font-size: 18px;
+}
+
+
+/* -------modal form add group--------- */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__content {
+    width: 1200px;
+    height: 650px;
+    background-color: white;
+    transform: translateY(-15%);
+    display: flex;
+}
+
+.modal__group-half {
+    width: 50%;
+}
+
+.formGroup-container {
+    padding: 64px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.modal__btn-close {
+    position: absolute;
+    font-size: 40px;
+    right: 10px;
+    top: 10px;
+    text-decoration: none;
+    color: rgba(23, 43, 77, 0.5);
+    cursor: pointer;
+    padding: 15px;
+}
+
+.modal__btn-close:hover {
+    color: rgba(23, 43, 77, 1);
+}
+
+.modal__btn-close i {
+    font-size: 18px;
+}
+
+.formGroup__form {
+    width: 388px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup__description-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.formGroup__description-sup-title {
+    font-weight: lighter;
+    line-height: 1.2;
+    font-size: 18px;
+    color: #626F86;
+}
+
+.formGroup__form-label-l {
+    margin: 15px 0 5px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.formGroup__form-input {
+    border: 2px solid #dcdfe4;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    padding: 14px 12px;
+}
+
+.formGroup__form-area {
+    height: 100px;
+    resize: none;
+}
+
+.formGroup__form-span {
+    margin-left: 5px;
+}
+
+.formGroup__form-span-option {
+    font-weight: 100;
+    color: #44546fad;
+}
+
+.formGroup__form-span-require {
+    color: #c50000;
+    font-size: 17px;
+    line-height: 5px;
+    font-weight: 800;
+}
+
+.formGroup__form-submit {
+    color: white;
+    background: #0c66e4;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 13px;
+    border-radius: 4px;
+    border: none;
+    letter-spacing: 1px;
+}
+
+.formGroup__form-submit:hover {
+    cursor: pointer;
+    background: rgba(12, 102, 228, 0.8);
+}
+
+.modal__group-background {
+    background-image: url("https://trello.com/assets/df0d81969c6394b61c0d.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex: 1;
+    justify-content: end;
+}
+
+.modal__group-image {
+    margin-top: 112px;
+    background: url("https://trello.com/assets/d1f066971350650d3346.svg");
+    width: 342px;
+    height: 256px;
+    object-fit: cover;
+}
+
+/*Form add group*/
+
+.w-fit {
+    width: fit-content;
+    border-radius: 5px;
+}
